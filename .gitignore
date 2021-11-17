@@ -1,0 +1,55 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+reactwc/dist
+reactwc/.parcel-cache
+wc-city-angular/dist
+wc-city-angular/.angular
+wc-footer/.angular
+shell/dist
+wc-leftbar/dist
+wc-rightbar/dist
+wc-rightbar/.parcel-cache
+wc-footer/dist
+
+# dependencies
+reactwc/node_modules
+wc-city-angular/node_modules
+shell/node_modules
+wc-leftbar/node_modules
+wc-rightbar/node_modules
+wc-footer/node_modules
+
+# profiling files
+chrome-profiler-events*.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
