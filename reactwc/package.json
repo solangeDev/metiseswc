@@ -1,0 +1,26 @@
+{
+  "name": "reactwc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mycomponent.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.1",
+    "parcel": "^2.0.1"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "@mui/material": "^5.1.0",
+    "react": "^16.3.0",
+    "react-custom-events": "^1.0.5",
+    "react-dom": "^16.3.0",
+    "react-to-webcomponent": "^1.5.1",
+    "sass": "^1.43.4"
+  }
+}
