@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comunicacion</title>
+    <!--en el caso de vue hay que importar la libreria en el main -->
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css"
+    />
+    <style>
+      .cdk-global-overlay-wrapper  {
+        position: absolute;
+        top: 0;
+        background-color: white;
+        width: 100%;
+        height: 112vh;
+        z-index: 2000;
+      }
+
+      body {
+        margin: 0;
+      }
+      .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        position: relative;
+      }
+      .menu {
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- React 16.3.0 -->
+      <div class="menu">
+        <my-app-react id="app-react" :name="appReact.name"></my-app-react>
+        <script src="http://localhost:8001/index.a12dea61.js"></script>
+      </div>
+      <div class="wrapper">
+        <div>
+          <!-- Vue 2 -->
+          <wc-leftbar id="sidebar" :images="sidebar.sidebar.list"></wc-leftbar>
+          <script src="http://localhost:8004/wc-leftbar.min.js"></script>
+        </div>
+        <div>
+          <!-- Angular 12 -->
+          <wc-city-angular id="map" :cities="cities"></wc-city-angular>
+          <script src="http://localhost:8005/wc-city-angular/runtime.js"></script>
+          <script src="http://localhost:8005/wc-city-angular/polyfills.js"></script>
+          <script src="http://localhost:8005/wc-city-angular/main.js"></script>
+        </div>
+        <!-- React 17.0.2 -->
+        <div>
+          <wc-rightbar id="rightbar" :name="rightbar.name"></wc-rightbar>
+          <script src="http://localhost:8006/index.a12dea61.js"></script>
+        </div>
+      </div>
+      <!-- Angular 6.0 -->
+      <div>
+        <script src="http://localhost:8003/wc-footer/runtime.js"></script>
+        <script src="http://localhost:8003/wc-footer/polyfills.js"></script>
+        <script src="http://localhost:8003/wc-footer/main.js"></script>
+        <wc-footer id="footer" :name="footer.name" :url="footer.url"></wc-footer>
+      </div>
+    </main>
+  </body>
+  <script src="main.js"></script>
+
+  <!-- <script>
+
+    const angular = document.querySelector("wc-city-angular");
+    angular.addEventListener("likeNotify", (e) => {
+      console.log("recibiendo evento del appRoot Angular");
+    });
+
+    const react = document.querySelector('wc-header');
+    react.addEventListener('event-shell', e => {
+      document.getElementById("hola").setAttribute('cities', JSON.stringify(e.detail))
+      console.log('recibiendo evento del appRoot react', e);
+    });
+
+    const react = document.querySelector('reactwc-component');
+    react.addEventListener('event-shell', e => {
+      console.log('recibiendo evento del appRoot React', e.detail);
+    });
+  </script> -->
+</html>
